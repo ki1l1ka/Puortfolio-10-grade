@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puortflio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="menu-item" href="#main">Обо мне</a>
+        <a class="menu-item" href="#experience">Мой опыт</a>
+        <a class="menu-item" href="#projects">Проекты</a>
+        <a class="menu-item" href="#contact">Контакты</a>
+      </nav>
+      <div class="mobile-block">
+        <h1>Портфолио Ильи</h1>
+        <img
+          class="menu-icon"
+          src="menu"
+          alt="Menu Icon"
+          onclick="openSideBar()"
+        />
+      </div>
+    </header>
+
+    <main>
+      <div id="side-bar">
+        <img
+          class="menu-close"
+          src="menu"
+          alt="Menu Close"
+          onclick="closeSideBar()"
+        />
+        <div class="menu-items">
+          <a class="menu-item" href="#main">Обо мне</a>
+          <a class="menu-item" href="#experience">Мой опыт</a>
+          <a class="menu-item" href="#projects">Проекты</a>
+          <a class="menu-item" href="#contact">Контакты</a>
+        </div>
+      </div>
+
+      <section id="main">
+        <div class="main-text">
+          <h1 class="header">Моё портфолио</h1>
+          <p class="text">
+            Меня зовут Илья, я учусь программированию в "ЛИТ 1533". В настоящее время работаю над дипломным проектом 10-го класса.
+          </p>
+        </div>
+        <img
+          class="picture"
+          src="pepe_avatar.jpg"
+          alt="Аватар Дискорд"
+        />
+      </section>
+      <section id="experience" style="position: relative">
+        <div class="main-text">
+          <h1 class="header">Опыт</h1>
+          <p class="text">За жизнь набрался огромного опыта. Работал с такими востребованными инструментами и языками программирования, как</p>
+        </div>
+            <div class="skills-tags">
+            <a href="https://scratch.mit.edu/" target="_blank"><span class="tag">Scratch</span></a>
+            <a href="https://education.lego.com/en-us/downloads/mindstorms-ev3/software/" target="_blank"><span class="tag">EV-3</span></a>
+            <a href="https://dotnet.microsoft.com/ru-ru/languages/csharp" target="_blank"><span class="tag">C#</span></a>
+            <a href="https://ru.wikipedia.org/wiki/HTML" target="_blank"><span class="tag">HTML</span></a>
+            <a href="https://ru.wikipedia.org/wiki/CSS" target="_blank"><span class="tag">CSS</span></a>
+            <a href="https://ru.overleaf.com/" target="_blank"><span class="tag">LaTeX</span></a>
+          </div>
+        </section>
+
+
+      <section id="projects" style="position: relative">
+        <div class="projects-description">
+          <h1 class="header">Мои проекты</h1>
+          <p class="text">Сейчас я работаю над своим дипломным проектом, связанному с переработкой ядерных отходов. Если вас интересует участие в этом проекте, можете оставить свою заявку или просьбу ниже.</p>
+        </div>
+        <img class="picture" 
+          src="image.jpg"
+          alt="АЭС">
+      </section>
+
+      <section id="contact">
+        <h1>Контакты</h1>
+        <p class="contact-description">
+          Хотите вместе что-нибудь сделать или заказать реализацию проекта, опишите свою просьбу здесь или свяжитесь со мной
+        </p>
+        <form>
+          <label for="name">Ваше имя</label>
+          <input
+            id="name"
+            class="input"
+            name="name"
+            type="text"
+            placeholder="Ваше имя"
+          />
+
+          <label for="email">Ваш e-mail</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="example@mail.ru"
+          />
+
+          <label for="message">Ваш вопрос</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Ваша просьба"
+          ></textarea>
+        </form>
+        <button id="button" class="form-btn" onclick="sendForm()">
+          Отправить просьбу
+        </button>
+      </section>
+    </main>
+    <button onclick="request()">Отправить запрос</button>
+    <footer>
+      <div class="footer-content">
+        <p>+7 915 456 34-83</p>
+        <p>ilya.linge@gmail.com</p>
+      </div>
+    </footer>
+  </body>
+
+  <script src="main.js"></script>
+</html>
